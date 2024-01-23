@@ -14,7 +14,7 @@ La página web ha sido diseñada con la intención de informar a los clientes de
 
 - **Información Detallada de Servicios:** Cada servicio ofrecido por el taller está detallado de manera clara, proporcionando a los visitantes una comprensión completa de lo que el Garaje Javier puede hacer por ellos.
 
-- **Formulario de Contacto:** Facilitamos la comunicación con nuestros clientes a través de diferentes formularios de contacto, cita previa, y presupuesto fáciles de usar, garantizando una respuesta rápida a cualquier pregunta o consulta.
+- **Formulario de Contacto:** Facilitar la comunicación con el cliente a través de diferentes formularios de contacto, cita previa, y presupuesto fáciles de usar, garantizando una respuesta rápida a cualquier pregunta o consulta.
 
 ## Tecnologías Utilizadas 🖥️
 
@@ -24,6 +24,6 @@ Este proyecto ha sido desarrollado utilizando las siguientes tecnologías:
 - CSS3
 - JavaScript
 - PHP (No implementado aún)
-- jQuery
+- jQuery (No implementado aún)
 
 ¡Gracias por tu interés en mi proyecto!
