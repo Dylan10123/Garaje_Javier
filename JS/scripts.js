@@ -38,6 +38,11 @@ window.onload = function () {
         document.getElementById('publicidad').onmouseover = overlibPublicidad
     }
 
+    if (nombreArchivo == 'contacto.html') {
+        document.getElementById('privacidad').onmouseover = overlibPrivacidad
+        document.getElementById('publicidad').onmouseover = overlibPublicidad
+    }
+
 }
 
 /* Esto establece la función onClick al boton desplegable,
