@@ -12,7 +12,7 @@ window.onload = function () {
     // Asociar evento a todos los botones de la web
     var botones = document.getElementsByTagName('button');
     for (let i = 0; i < botones.length; i++) {
-        if (botones[i].id != 'dropbtn') {
+        if (botones[i].id != 'dropbtn' && botones[i].id != 'contactoSubmit') {
             botones[i].onclick = redireccionar
         }
     }
@@ -27,9 +27,9 @@ window.onload = function () {
     }
 
     // Asociar evento a el envio del formulario de contacto
-    if (nombreArchivo == 'contacto.html') {
-        document.getElementById('contactoSubmit').onclick = validarContacto;
-    }
+    // if (nombreArchivo == 'contacto.html') {
+    //     document.getElementById('contactoSubmit').onclick = validarContacto;
+    // }
 
     // Asociar evento al formulario de solicitud de cita previa o presupuesto
     if (nombreArchivo == 'CitaPrevia.html' || nombreArchivo == 'presupuesto.html') {
@@ -181,7 +181,7 @@ function validarCitaPrevia(e) {
 }
 
 // Función que valida los datos del formulario de contacto
-function validarContacto(e) {
+function validarContacto() {
     var nombre = document.getElementsByName('nombre')[0].value;
     var email = document.getElementsByName('email')[0].value;
     var descripcion = document.getElementById('descripcion').value;
@@ -211,10 +211,7 @@ function validarContacto(e) {
         document.getElementById('invalid-mensaje').style.display = 'block';
     }
 
-    // Evitar que el formulario se envíe si hay campos no válidos
-    if (!isValid) {
-        e.preventDefault()
-    }
+    return isValid;
 }
 
 function overlibPrivacidad() {
