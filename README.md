@@ -26,5 +26,4 @@ Este proyecto ha sido desarrollado utilizando las siguientes tecnologías:
 - PHP (No implementado aun)
 - JQuery
 
-## ______________________________________________________
 ¡Gracias por tu interés en nuestro proyecto!
