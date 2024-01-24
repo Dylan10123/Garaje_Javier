@@ -17,7 +17,9 @@ function enviarDatos() {
     var datos = {
         nombre: document.getElementById("nombre").value,
         apellidos: document.getElementById("apellidos").value,
-        email: document.getElementById("email").value
+        email: document.getElementById("email").value,
+        mensaje: document.getElementById("descripcion").value,
+        terminosPublicidad: document.getElementById("terminos-publi").checked
     };
 
     var queryString = construirQueryString(datos);

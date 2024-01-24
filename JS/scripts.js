@@ -185,6 +185,7 @@ function validarContacto() {
     var nombre = document.getElementsByName('nombre')[0].value;
     var email = document.getElementsByName('email')[0].value;
     var descripcion = document.getElementById('descripcion').value;
+    var priv = document.getElementById('terminos-priv');
 
     var isValid = true;
 
@@ -209,6 +210,11 @@ function validarContacto() {
         isValid = false;
         document.getElementById('descripcion').classList.add('class', 'invalid-input')
         document.getElementById('invalid-mensaje').style.display = 'block';
+    }
+
+    if (!priv.checked) {
+        isValid = false;
+        document.getElementById('invalid-terminos').style.display = 'block';
     }
 
     return isValid;
