@@ -33,8 +33,14 @@ function enviarDatos() {
 
                 console.log(objeto.responseText)
 
-                alert("¡Datos guardados correctamente!");
-                window.location.href = "contacto.html";
+                // Llamada al método que ejecuta el plugin SweetAlert2
+                // Se muestra un mensaje de confirmación cuando la comunicación se ha realizado con éxito.
+                Swal.fire({
+                    title: "Mensaje enviado con éxito!",
+                    text: "Le contestaremos lo antes posible!",
+                    icon: "success"
+                });
+                // window.location.href = "contacto.html";
             } else {
                 console.log('Error: ' + objeto.status);
             }
