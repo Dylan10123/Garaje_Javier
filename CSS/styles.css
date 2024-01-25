@@ -721,12 +721,12 @@ footer .copyright {
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #eee;
+    background-color: #c6c6c6;
 }
 
 /* Cuando pasas el raton por encima s epone un fondo gris */
 .cajaCheckBox:hover input~.checkmark {
-    background-color: #ccc;
+    background-color: #999999;
 }
 
 /* Cuando la checkbox esta seleccionada se pone un fondo azul */
@@ -906,7 +906,7 @@ textarea.invalid-input {
     -webkit-appearance: none;
 }
 
-label {
+.search-label {
     color: #e3e4e8;
     overflow: hidden;
     position: absolute;
