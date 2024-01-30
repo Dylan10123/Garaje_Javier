@@ -220,6 +220,47 @@ nav ul li a:hover::before {
 /*=================================================*/
 
 /*===================BANNER========================*/
+.yac {
+    /* width: 1000px; */
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.yac-inner div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.yac-inner .active {
+    z-index: 1;
+}
+
+.yac-indicators {
+    position: absolute;
+    padding: 0;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+}
+
+.yac-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.yac-indicators li.active {
+    background-color: #fff;
+}
+
 
 .banner {
     margin-top: 44px;

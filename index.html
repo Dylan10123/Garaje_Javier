@@ -1,12 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 
 <head>
+    <link rel="stylesheet" href="CSS/glider.css">
     <link rel="stylesheet" href="CSS/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JS/glider.js"></script>
     <script type="text/javascript" src="JS/scripts.js"></script>
+    <script src="JS/jQuery.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="shortcut icon" href="imagenes/icons/favicon.png" type="image/x-icon">
-    
+
     <title>Inicio - GARAJE JAVIER</title>
 </head>
 
@@ -38,19 +42,21 @@
         </ul>
     </nav>
 
-    <div class="banner">
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="imagenes/banner11.jpg">
-            </div>
-            <div class="mySlides fade">
-                <img src="imagenes/banner22.jpg">
-            </div>
-            <div class="mySlides fade">
-                <img src="imagenes/banner33.jpg">
-            </div>
+    <!-- Slider -->
+    <section>
+        <div dir="ltr" class="slide" data-glider-autoplay data-glider-links="glider-top">
+            <ul>
+                <li style="background-image: url('imagenes/banner11.jpg'); background-size: cover;">
+                </li>
+                <li style="background-image: url('imagenes/banner22.jpg'); background-size: cover;">
+                </li>
+                <li style="background-image: url('imagenes/banner33.jpg'); background-size: cover;">
+                </li>
+            </ul>
         </div>
-    </div>
+    </section>
+
+
 
     <!-- Tarjetas en las que se muestran los servicios que ofrece el taller -->
     <div class="servicios">
@@ -68,8 +74,10 @@
                     <div class="servicio-info">
                         <p class="card-titulo">Climatización</p>
                         <p class="card-text">
-                            Realizamos las operaciones de diagnosis, mantenimiento y reparación del circuito frigorífico,
-                            del circuito eléctrico y del equipo de control electrónico en sistemas de climatización automática.
+                            Realizamos las operaciones de diagnosis, mantenimiento y reparación del circuito
+                            frigorífico,
+                            del circuito eléctrico y del equipo de control electrónico en sistemas de climatización
+                            automática.
                         </p>
                     </div>
                 </div>
@@ -81,7 +89,7 @@
                         <p class="card-titulo">Cristales y lunas</p>
                         <p class="card-text">
                             Somos especialistas en la sustitución de cristales y lunas para su coche y le ofrecemos
-                             un servicio con las máximas garantías de calidad.
+                            un servicio con las máximas garantías de calidad.
                         </p>
                     </div>
                 </div>
@@ -129,7 +137,8 @@
                         <p class="card-titulo">Frenos</p>
                         <p class="card-text">
                             Realizamos todo tipo de intervenciones sobre el sistema de frenos de su vehículo,
-                            sustitución de líquido, cambio de pastillas de freno, reparación de desequilibrios durante la frenada, etc.
+                            sustitución de líquido, cambio de pastillas de freno, reparación de desequilibrios durante
+                            la frenada, etc.
                         </p>
                     </div>
                 </div>
@@ -153,7 +162,8 @@
                         <p class="card-titulo">Inyección diésel</p>
                         <p class="card-text">
                             Diagnosticamos, mantenemos y reparamos (mecánica, electricidad y electrónica) los sistemas
-                            de inyección diésel, desde los equipados con bombas de inyección rotativas hasta los de última generación.
+                            de inyección diésel, desde los equipados con bombas de inyección rotativas hasta los de
+                            última generación.
                         </p>
                     </div>
                 </div>
@@ -177,7 +187,8 @@
                         <p class="card-titulo">Mantenimiento programado</p>
                         <p class="card-text">
                             Su vehículo ha de someterse a unas revisiones periódicas predefinidas. La realización
-                            de estas operaciones de mantenimiento le asegura no perder la garantía dada por el fabricante.
+                            de estas operaciones de mantenimiento le asegura no perder la garantía dada por el
+                            fabricante.
                         </p>
                     </div>
                 </div>
@@ -252,7 +263,8 @@
                         <p class="card-titulo">Pre-ITV</p>
                         <p class="card-text">
                             Sometemos su vehículo una revisión previa completa que le garantizará superar con éxito la
-                            revisión ITV. Realizamos una revisión exhaustiva de aquellos puntos que van a ser examinados.
+                            revisión ITV. Realizamos una revisión exhaustiva de aquellos puntos que van a ser
+                            examinados.
                         </p>
                     </div>
                 </div>
@@ -331,15 +343,14 @@
                 </div>
 
                 <div class="terminos" id="terminos">
-                    <label for="terminos">
+                    <label for="agreeTerminos">
                         <input type="checkbox" name="agreeTerminos" id="agreeTerminos" required>
                         He leído y acepto que mis datos sean tratados por TALLERES JAVIER BLASCO,S.L.U., con la
                         finalidad de recibir
                         publicidad o información promocional sobre los productos y/o servicios que ofrecen, así como
                         suscribirme a su
                         Newsletter, pulsando sobre la casilla de verificación, de conformidad con la
-                        <a target="_blank" href=""
-                            id="aPoliticaPrivacidad"><strong>Política de Privacidad</strong></a>
+                        <a target="_blank" href="" id="aPoliticaPrivacidad"><strong>Política de Privacidad</strong></a>
                         .
 
                         <span class="cuadroCheck"></span>

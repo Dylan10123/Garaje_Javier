@@ -1,11 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
 
 <head>
     <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/glider.css">
     <link rel="shortcut icon" href="imagenes/icons/favicon.png" type="image/x-icon">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!-- Enlace al plugin SweetAlert2 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JS/glider.js"></script>
+    <script src="JS/jQuery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="JS/ajaxContacto.js"></script>
     <script src="JS/scripts.js"></script>
@@ -41,19 +44,19 @@
         </ul>
     </nav>
 
-    <div class="banner">
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="imagenes/banner11.jpg">
-            </div>
-            <div class="mySlides fade">
-                <img src="imagenes/banner22.jpg">
-            </div>
-            <div class="mySlides fade">
-                <img src="imagenes/banner33.jpg">
-            </div>
+    <!-- Slider -->
+    <section>
+        <div dir="ltr" class="slide" data-glider-autoplay data-glider-links="glider-top">
+            <ul>
+                <li style="background-image: url('imagenes/banner11.jpg'); background-size: cover;">
+                </li>
+                <li style="background-image: url('imagenes/banner22.jpg'); background-size: cover;">
+                </li>
+                <li style="background-image: url('imagenes/banner33.jpg'); background-size: cover;">
+                </li>
+            </ul>
         </div>
-    </div>
+    </section>
 
     <div class="limites">
         <div class="titulo tit-blanco">
@@ -97,7 +100,8 @@
                     <input id="terminos-priv" type="checkbox">
                     <span class="checkmark"></span>
                 </label>
-                <div id="invalid-terminos" class="invalid-mensaje">Debes aceptar los términos de privacidad para continuar</div>
+                <div id="invalid-terminos" class="invalid-mensaje">Debes aceptar los términos de privacidad para
+                    continuar</div>
                 <label class="cajaCheckBox" id="publicidad" onmouseout="return nd();">
 
                     He leído y acepto los terminos de la

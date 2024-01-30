@@ -1,5 +1,5 @@
 window.onload = function () {
-    showSlides();
+    // showSlides();
 
     // Si no estamos en la página de inicio no se cargan los servicios aleatorios
     var url = window.location.href;     // Obtener la URL actual
