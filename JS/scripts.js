@@ -12,7 +12,7 @@ window.onload = function () {
     // Asociar evento a todos los botones de la web
     var botones = document.getElementsByTagName('button');
     for (let i = 0; i < botones.length; i++) {
-        if (botones[i].id != 'dropbtn' && botones[i].id != 'contactoSubmit') {
+        if (botones[i].id != 'dropbtn' && botones[i].id != 'contactoSubmit' && botones[i].id != 'formSubmit' ) {
             botones[i].onclick = redireccionar
         }
     }
@@ -32,16 +32,16 @@ window.onload = function () {
     // }
 
     // Asociar evento al formulario de solicitud de cita previa o presupuesto
-    if (nombreArchivo == 'CitaPrevia.html' || nombreArchivo == 'presupuesto.html') {
-        document.getElementById('formSubmit').onclick = validarCitaPrevia;
+    if (nombreArchivo == 'CitaPrevia.html' || nombreArchivo == 'presupuesto.html' || nombreArchivo == 'contacto.html') {
+        // document.getElementById('formSubmit').onclick = validarCitaPrevia;
         document.getElementById('privacidad').onmouseover = overlibPrivacidad
         document.getElementById('publicidad').onmouseover = overlibPublicidad
     }
 
-    if (nombreArchivo == 'contacto.html') {
-        document.getElementById('privacidad').onmouseover = overlibPrivacidad
-        document.getElementById('publicidad').onmouseover = overlibPublicidad
-    }
+    // if (nombreArchivo == 'contacto.html') {
+    //     document.getElementById('privacidad').onmouseover = overlibPrivacidad
+    //     document.getElementById('publicidad').onmouseover = overlibPublicidad
+    // }
 
 }
 
@@ -178,6 +178,8 @@ function validarCitaPrevia(e) {
     if (!isValid) {
         e.preventDefault()
     }
+
+    return isValid;
 }
 
 // Función que valida los datos del formulario de contacto

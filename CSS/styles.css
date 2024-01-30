@@ -555,6 +555,7 @@ nav ul li a:hover::before {
     margin: 10px;
     float: left;
     border-radius: 10px;
+    transition: .2s;
 }
 
 .solicitudes #img1 {

@@ -4,10 +4,15 @@
 <head>
     <link rel="stylesheet" href="CSS/styles.css" />
     <link rel="stylesheet" href="CSS/glider.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="shortcut icon" href="imagenes/icons/favicon.png" type="image/x-icon">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="JS/glider.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="JS/jQuery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="JS/ajaxCitaPrevia.js"></script>
     <script src="JS/scripts.js"></script>
     <script type="text/javascript" src="JS/overlib.js"></script>
     <title>Inicio - GARAJE JAVIER</title>
@@ -82,24 +87,27 @@
 
                 <h3>Información del vehículo</h3><br>
                 <div class="caja-input">
+                    <input type="text" name="marca" id="marca">
+                    <label>Marca del vehiculo</label>
+                </div>
+                <div class="caja-input">
                     <input type="text" name="matricula" id="matricula">
                     <label>Matrícula</label>
                     <div id="invalid-matricula" class="invalid-mensaje">Introduzca una matrícula valida.</div>
                 </div>
                 <div class="caja-input">
-                    <input type="text" name="km">
+                    <input type="text" name="km" id="km">
                     <label>Km</label>
                 </div>
                 <div class="caja-input">
-                    <input type="text" name="bastidor">
+                    <input type="text" name="bastidor" id="bastidor">
                     <label>Número de bastidor</label>
                 </div>
 
                 <label class="cajaCheckBox" id="privacidad" onmouseout="return nd();">
 
                     He leído y acepto los terminos de la
-                    <a target="_blank" href=""
-                        id="aPoliticaPrivacidad"><strong>Política de Privacidad</strong></a>
+                    <a target="_blank" href="" id="aPoliticaPrivacidad"><strong>Política de Privacidad</strong></a>
                     .
                     <input id="terminos-priv" type="checkbox">
                     <span class="checkmark"></span>
@@ -107,13 +115,12 @@
                 <label class="cajaCheckBox" id="publicidad" onmouseout="return nd();">
 
                     He leído y acepto los terminos de la
-                    <a target="_blank" href=""
-                        id="aPoliticaPrivacidad"><strong>Política de Publicidad</strong></a>
+                    <a target="_blank" href="" id="aPoliticaPrivacidad"><strong>Política de Publicidad</strong></a>
                     .
                     <input id="terminos-publi" type="checkbox">
                     <span class="checkmark"></span>
                 </label>
-                <div id="invalid-terminos" class="invalid-mensaje">Debes aceptar los términos para continuar con la
+                <div id="invalid-terminos" class="invalid-mensaje">Debes aceptar los términos de privacidad para continuar con la
                     solicitud.</div>
             </div>
 
@@ -122,102 +129,102 @@
                 <div class="checkContainer">
                     <label class="cajaCheckBox">
                         Cambio de aceite
-                        <input type="checkbox">
+                        <input type="checkbox" id="cambioAceite">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Diagnosis
-                        <input type="checkbox">
+                        <input type="checkbox" id="diagnosis">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Correa de distribución
-                        <input type="checkbox">
+                        <input type="checkbox" id="correaDistribucion">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Climatización
-                        <input type="checkbox">
+                        <input type="checkbox" id="climatizacion">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Mantenimiento
-                        <input type="checkbox">
+                        <input type="checkbox" id="mantenimiento">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Escape
-                        <input type="checkbox">
+                        <input type="checkbox" id="escape">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Mecánica general
-                        <input type="checkbox">
+                        <input type="checkbox" id="mecGeneral">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Neumáticos
-                        <input type="checkbox">
+                        <input type="checkbox" id="neumaticos">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Frenos
-                        <input type="checkbox">
+                        <input type="checkbox" id="frenos">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Amortiguadores
-                        <input type="checkbox">
+                        <input type="checkbox" id="amortiguadores">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Pre-ITV
-                        <input type="checkbox">
+                        <input type="checkbox" id="preITV">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Carrocería
-                        <input type="checkbox">
+                        <input type="checkbox" id="carroceria">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Electrónica
-                        <input type="checkbox">
+                        <input type="checkbox" id="electronica">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Pintura
-                        <input type="checkbox">
+                        <input type="checkbox" id="pintura">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Electricidad
-                        <input type="checkbox">
+                        <input type="checkbox" id="electricidad">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Lunas
-                        <input type="checkbox">
+                        <input type="checkbox" id="lunas">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Inyección de gasolina
-                        <input type="checkbox">
+                        <input type="checkbox" id="inyecGasolina">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Car audio
-                        <input type="checkbox">
+                        <input type="checkbox" id="audio">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Inyección Diésel
-                        <input type="checkbox">
+                        <input type="checkbox" id="inyecDiesel">
                         <span class="checkmark"></span>
                     </label>
                     <label class="cajaCheckBox">
                         Tuning
-                        <input type="checkbox">
+                        <input type="checkbox" id="tuning">
                         <span class="checkmark"></span>
                     </label>
                 </div>
@@ -227,7 +234,7 @@
                     placeholder="Describe otros detalles..."></textarea>
             </div>
 
-            <input class="btn" type="submit" name="submit" value="Solicitar cita" id="formSubmit">
+            <button class="btn" type="button" id="formSubmit">Solicitar cita</button>
 
         </form>
     </div>
@@ -261,8 +268,7 @@
                         publicidad o información promocional sobre los productos y/o servicios que ofrecen, así como
                         suscribirme a su
                         Newsletter, pulsando sobre la casilla de verificación, de conformidad con la
-                        <a target="_blank" href=""
-                            id="aPoliticaPrivacidad"><strong>Política de Privacidad</strong></a>
+                        <a target="_blank" href="" id="aPoliticaPrivacidad"><strong>Política de Privacidad</strong></a>
                         .
 
                         <span class="cuadroCheck"></span>
