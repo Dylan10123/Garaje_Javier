@@ -11,11 +11,11 @@ function construirQueryString(params) {
     }).join('&');
 }
 
-function enviarDatos() {
+function enviarDatos(nombreTabla) {
     console.log('Enviando datos...');
 
     var datos = {
-        tabla: 'solicitud_cita',
+        tabla: nombreTabla,
         nombre: document.getElementById("nombre").value,
         apellidos: document.getElementById("apellidos").value,
         email: document.getElementById("email").value,
@@ -80,7 +80,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Llama a la función de validación
         if (validarCitaPrevia()) {
             // Si la validación es exitosa, ejecuta la función enviarDatos
-            enviarDatos();
+            var tabla = document.getElementById('formulario').getAttribute('formTable-name')
+            enviarDatos(tabla);
         }
     }
 });
