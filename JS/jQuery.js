@@ -21,7 +21,7 @@ $(document).ready(function () {
         }, 200).css('box-shadow', 'none')
     })
 
-
+    // Array cin todas las marcas que contempla el autocompletado
     const marcasDeCoches = [
         "Audi",
         "BMW",
@@ -45,6 +45,7 @@ $(document).ready(function () {
         "Renault"
     ];
 
+    // llamada a la función de autocompletado
     $( "#marca" ).autocomplete({
         source: marcasDeCoches
       });
