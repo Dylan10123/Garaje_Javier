@@ -560,14 +560,14 @@ nav ul li a:hover::before {
 
 .solicitudes #img1 {
     background-image: url('../imagenes/citaPrevia.jpg');
-    background-size: cover;
+    background-size: 100%;
     background-position: 50% 35%;
     background-repeat: no-repeat;
 }
 
 .solicitudes #img2 {
     background-image: url('../imagenes/presupuesto.jpg');
-    background-size: cover;
+    background-size: 100%;
     background-position: 50% 35%;
     background-repeat: no-repeat;
 }
