@@ -64,7 +64,6 @@ function limpiarFormularioContacto() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    console.log('DOM cargado')
     limpiarFormularioContacto()
     document.getElementById('contactoSubmit').onclick = function () {
         // Llama a la función de validación
