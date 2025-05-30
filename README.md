@@ -23,7 +23,7 @@ Este proyecto ha sido desarrollado utilizando las siguientes tecnologías:
 - HTML5
 - CSS3
 - JavaScript
-- PHP (No implementado aún)
+- PHP
 - Librería de jQuery sobre JavaScript (No implementado aún)
 
 ¡Gracias por tu interés en mi proyecto!
