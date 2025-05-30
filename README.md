@@ -24,6 +24,6 @@ Este proyecto ha sido desarrollado utilizando las siguientes tecnologías:
 - CSS3
 - JavaScript
 - PHP
-- Librería de jQuery sobre JavaScript (No implementado aún)
+- Librería de jQuery sobre JavaScript
 
 ¡Gracias por tu interés en mi proyecto!
